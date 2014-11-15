@@ -70,6 +70,11 @@ m.module(document.getElementById("example"), app);
 
 ---
 
+### Tools, Utils & Extras
+
+- [Dependency injector](https://gist.github.com/ilsenem/11345055)
+- ...
+
 ### Learn more
 
 - [Tutorial](http://lhorie.github.io/mithril/getting-started.html)
