@@ -4,8 +4,10 @@
 	"scripts": {
 		"test": "grunt test"
 	},
-	"main": "mithril.js",
+	"main": "dist/mithril.js",
 	"devDependencies": {
+		"gobble": "*",
+		
 		"grunt-cli": "*",
 		"grunt-contrib-copy": "*",
 		"grunt-contrib-uglify": "*",
@@ -22,7 +24,7 @@
 		"grunt-contrib-connect": "~0.7.1",
 		"grunt-contrib-jshint": "~0.10.0",
 		"grunt-contrib-watch": "~0.6.1",
-		"grunt-jscs-checker": "^0.4.4",
+		"grunt-jscs": "^0.4.4",
 		"grunt-sauce-tunnel": "^0.2.1",
 		"load-grunt-config": "^0.9.2",
 		"merge": "^1.1.3",

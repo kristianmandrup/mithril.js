@@ -118,13 +118,27 @@ module.exports = function(grunt) {
 
 	var currentVersionArchiveFolder = archiveFolder + "/v" + version;
 	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
 		md2html: md2htmlTasks,
 		uglify: {
 			options: {banner: "/*\nMithril v" + version + "\nhttp://github.com/lhorie/mithril.js\n(c) Leo Horie\nLicense: MIT\n*/", sourceMap: true},
 			mithril: {src: "mithril.js", dest: "mithril.min.js"}
 		},
 		concat: {
-			test: {src: ["mithril.js", "./tests/test.js", "./tests/mock.js", "./tests/mithril-tests.js"], dest: currentVersionArchiveFolder + "/mithril-tests.js"}
+	    options: {
+	      stripBanners: true,
+	      banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+	        '<%= grunt.template.today("yyyy-mm-dd") %> */',
+	    },
+			dist: {
+				sourceMap: true,
+				src: ["lib/**/*.js"],
+				dest: currentVersionArchiveFolder + "/mithril.js"
+			}
+			test: {
+				src: [currentVersionArchiveFolder + "/mithril.js", "./tests/test.js", "./tests/mock.js", "./tests/mithril-tests.js"],
+				dest: currentVersionArchiveFolder + "/mithril-tests.js"
+			}
 		},
 		zip: {
 			distribution: {
