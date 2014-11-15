@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/lhorie/mithril.js.svg?branch=master)](https://travis-ci.org/lhorie/mithril.js)
 
 # Mithril
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/kristianmandrup/mithril.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 A Javascript Framework for Building Brilliant Applications
 
